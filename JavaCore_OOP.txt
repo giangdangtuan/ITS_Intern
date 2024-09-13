@@ -1,0 +1,138 @@
+1. 8 kiểu dữ liệu nguyên thủy: byte, short, int, long, float, double, char, boolean
+2. Wrapper class là các lớp trong java đc sử dụng để biểu diễn các kiểu dữ liệu nguyên thủy theo dạng đối tượng (thường dùng để ép kiểu)
+3. Mảng 1 chiều
+- Kích thước được xác định khi khai báo, dùng để lưu trữ 1 tập các giá trị có cùng kiểu dữ liệu
+- Cú pháp khai báo: <kiểu dữ liệu>[] <tên mảng> = new <kiểu dữ liệu>[<kích thước>];
+- Các hàm thường dùng: length() trả về số phần tử của mảng, sort() sắp xếp các phần tử mảng theo thứ tự tăng dần, toString() trả về 1 chuỗi đại diện cho mảng
+
+4. Mảng 2 chiều
+- Dữ liệu được lưu trữ theo dạng hàng và cột/ma trận
+- Cú pháp khai báo: dataType[][] arr = new dataType[số hàng][số cột];
+
+5. Chuỗi (String)
+- 2 cách để tạo đối tượng String (sử dụng string literal và từ khóa new)
++ String s = "";
++ String s = new String("");
+- Các hàm thường dùng:
++ charAt(index) : trả về ký tự char cho chỉ số cụ thể
++ length() : trả về độ dài chuỗi
++ substring(beginIndex) : trả về chuỗi con bắt đầu từ chỉ số index
++ substring(beginIndex, endIndex) : trả về chuỗi con bắt đầu từ chỉ số beginIndex và kết thúc tại chỉ số endIndex
++ equal(Object another) : so sanhs chuỗi
++ isEmpty() : kiểm tra chuỗi rỗng
++ indexOf(string) : trả về vị trí của string
+
+6. ArrayList
+- Là mảng động có thể thay đổi kích thước của mảng
+- Cú pháp khai báo : ArrayList<Kiểu dữ liệu> list = new ArrayList<Kiểu dữ liệu>();
+- Các hàm thường dùng:
++ add(Object o) : thêm phần tử vào cuối mảng
++ set(index, Object o) : cập nhật phần tử ở vị trí index bằng o
++ remove(index): xóa phần tử ở vị trí index
++ indexOf(Object o): trả về vị trí của o
++ clear(): xóa tất cả phần tử
+
+7. HashSet
+- HashSet chỉ chứa các phần tử duy nhất.
+- HashSet lưu trữ các phần tử bằng cách sử dụng một cơ chế được gọi là băm (hash table).
+- Cú pháp khai báo: HashSet<Kiểu dữ liệu> setName = new HashSet<Kiểu dữ liệu>();
+- Các hàm thường dùng:
++ add(Object element): thêm phần tử vào HashSet
++ addAll(Collection c): chèn 1 collection c vào HashSet
++ clear(): xóa tất cả phần tử trong HashSet
++ contains(Object element): trả về true nếu HashSet chứa phần tử đã chỉ định
++ remove(object o): xóa phần tử o trong HashSet
++ size(): trả về số lượng phần tử trong HashSet
+
+8. try-catch-finally
+- Khối lệnh try trong java được sử dụng để chứa một đoạn code có thế xảy ra một ngoại lệ. Nó phải được khai báo trong phương thức.
+- Sau một khối lệnh try phải khai báo khối lệnh catch hoặc finally hoặc cả hai.
+- Cú pháp của khối lệnh try-catch trong java
+  try {
+      // code có thể ném ra ngoại lệ
+  } catch(Exception_class_Name ref) {
+      // code xử lý ngoại lệ
+  }
+- Cú pháp của khối lệnh try-finally trong java
+  try {
+      // code có thể ném ra ngoại lệ
+  } finally {
+      // code trong khối này luôn được thực thi
+  }
+
+9. Custom Exception
+- Custom Exception là ngoại lệ do người dùng tự định nghĩa hay tự tạo riêng cho mình
+- Loại ngoại lệ này, người dùng có thể có riêng kiểu và thông điệp ngoại lệ cho mình.
+- Cách sử dụng: Tạo 1 lớp ngoại lệ kế thừa lớp Exception
+- Implement ít nhất một constructor với các tham số tương ứng với superclass là Exception
+
+10. FileWriter
+- Được sử dụng để ghi các dữ liệu theo định dạng ký tự vào 1 file
+- Cú pháp khởi tạo: FileWriter fw = new FileWriter(filename,append);
++ filename là tên file muốn ghi nếu chưa có file sẽ tạo mới (đường dẫn tương đối), có thể tạo file với đường dẫn địa chỉ tuyết đối
++ append = true thì mỗi lần ghi sẽ ghi vào cuối file còn false sẽ ghi đè lên file
+
+11. FileReader
+- Được sử dụng để đọc dữ liệu từ file. Nó trả về dữ liệu theo định dạng byte
+- Cú pháp khởi tạo: FileReader fr = new FileReader(filename);
+- Các hàm của lớp FileReader
++ read(): trả về 1 ký tự trong mẫu ASCII. Nó trả về -1 vào cuối tập tin
++ close(): đóng lớp FileReader
+
+12. OOP(hướng đối tượng)
+- Lớp (class) là 1 nhóm đối tượng có các thuộc tính chung. Nó là 1 mẫu/thiết kế từ đó các đối tượng được tạo ra
+- Đối tượng (object) là 1 thể hiện của 1 lớp.
+- Để khởi tạo 1 đối tượng ta sử dụng từ khóa new: objectType objectName = new ClassName(arguments);
+- Constructor là một dạng đặc biệt của phương thức được sử dụng để khởi tạo các đối tượng
+- Constructor được gọi tại thời điểm tạo đối tượng. Nó khởi tạo các giá trị để cung cấp dữ liệu cho các đối tượng
+- 2 kiểu constructor: constructor mặc định (ko có thám số), và constructor có tham số
+- Nạp chồng là một lớp có nhiều phương thức có tên giống nhau nhưng khác nhau về kiểu dữ liệu hoặc số lượng các tham số
++ ví dụ constructor có tham số là phương thức nạp chồng của constructor mặc định
+
+- Thuộc tính của lớp sẽ giúp tạo ra các trạng thái, hay các đặc điểm của các đối tượng được tạo ra từ lớp này
++ Khai báo thuộc tính: [khả_năng_truy_cập] kiểu_thuộc_tính tên_thuộc_tính [= giá_trị_ban_đầu];
+
+- Các phương thức (method) nó định nghĩa ứng xử của lớp. Một phương thức là một tập hợp các khối lệnh (code) để thi hành một chức năng nào đó
++ Cú pháp khai báo: [khả_năng_truy_cập] kiểu-dữ-liệu-trả-về tên-hàm(các tham số) {thân hàm}
+
+- Khả năng truy cập (Access modifier)
++ Default: Truy cập trong nội bộ package
++ Private: Truy cập trong nội bộ lớp
++ Public: Thành phần công khai, truy cập tự do từ bên ngoài
++ Protected: Truy cập trong nội bộ package, ngoài package bởi lớp con
+
+- Kế thừa là sự liên quan giữa hai class với nhau, trong đó có class cha (superclass) và class con (subclass). Khi kế thừa class con được hưởng tất cả các phương thức và thuộc tính của class cha
+- Cú pháp của kế thừa (từ khóa extends):
+  class Subclass-name extends Superclass-name {
+     //methods and fields
+  }
+- Từ khóa super
++ Là một biến tham chiếu được sử dụng để tham chiếu trực tiếp đến đối tượng của lớp cha gần nhất
++ Bất cứ khi nào bạn tạo ra instance(thể hiển) của lớp con, một instance của lớp cha được tạo ra ngầm định, nghĩa là được tham chiếu bởi biến super
++ Từ khóa super được sử dụng để tham chiếu trực tiếp đến biến instance của lớp cha gần nhất
++ super() được sử dụng để gọi trực tiếp Constructor của lớp cha
++ Từ khóa super được sử dụng để gọi trực tiếp phương thức của lớp cha
+
+- Tính đa hình:
++ Là 1 đối tượng có nhiều vai trò, hình dạng tùy thuộc ngữ cảnh khác nhau
++ Biểu hiện: nap chồng (overloading) và ghi đè (overriding)
++ Nạp chồng: thể hiện tính đa hình tại thời điểm biên dịch chương trình (compile time)
++ Ghi đè: thể hiện tính đa hình tại thời điểm chạy chương trình (runtime)
++ Cho phép các đối tượng khác nhau sử dụng chung 1 giao diện
+
+- Overriding (ghi đè): cho phép một lớp con cung cấp một định nghĩa mới cho một phương thức đã được định nghĩa trong lớp cha của nó. Quá trình này giúp lớp con mở rộng hoặc thay đổi hành vi của lớp cha mà không làm thay đổi mã nguồn của lớp cha.
+
+- Abstract class:
++ Một lớp được khai báo với từ khóa abstract là lớp trừu tượng (abstract class)
++ Lớp trừu tượng có thể có các phương thức abstract(ko có thân hàm) hoặc non-abtract(có thân hàm)
++ Không thể khởi tạo 1 đối tượng trực tiếp từ một class trừu tượng
++ Một lớp kế thừa từ lớp trừu tượng (subclass – lớp con) không cần phải implement non-abstract methods, nhưng những method nào có abstract thì bắt buộc phải override
+
+- Interface:
++ Một interface không phải là một lớp. Viết một interface giống như viết một lớp, nhưng chúng có 2 định nghĩa khác nhau. Một lớp mô tả các thuộc tính và hành vi của một đối tượng. Một interface chứa các hành vi mà một class triển khai
++ Các phương thức trong interface đều là các phương thức trừu tượng
++ Interface là một kỹ thuật để thu được tính trừu tượng hoàn toàn và đa kế thừa trong Java
++ Interface luôn luôn có modifier là: public interface, cho dù có khai báo rõ hay không
++ Nếu có các trường (field) thì chúng đều là: public static final, cho dù có khai báo rõ hay không
++ Các method của nó đều là method trừu tượng, nghĩa là không có thân hàm, và đều có modifier là: public abstract, cho dù có khai báo hay không
++ Trừ khi một lớp triển khai interface là lớp trừu tượng abstract, còn lại tất cả các phương thức của interface cần được định nghĩa trong class
