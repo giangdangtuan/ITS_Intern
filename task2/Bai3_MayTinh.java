@@ -7,10 +7,6 @@ public class Bai3_MayTinh {
 
         Scanner sc = new Scanner(System.in);
         double a,b;
-        System.out.print("Nhập a: ");
-        a = sc.nextDouble();
-        System.out.print("Nhập b: ");
-        b = sc.nextDouble();
         int choose;
         do{
             System.out.println("1. a + b");
@@ -20,6 +16,10 @@ public class Bai3_MayTinh {
             System.out.println("0. Thoát");
             System.out.println("Nhập lựa chọn: ");
             choose = sc.nextInt();
+            System.out.print("Nhập a: ");
+            a = sc.nextDouble();
+            System.out.print("Nhập b: ");
+            b = sc.nextDouble();
             switch (choose) {
                 case 1:
                     System.out.println("a + b = " + (a + b));
@@ -31,7 +31,11 @@ public class Bai3_MayTinh {
                     System.out.println("a * b = " + (a * b));
                     break;
                 case 4:
-                    System.out.println("a / b = " + (a / b));
+                    if(b==0){
+                        System.out.println("Không thực hiện được phép chia cho 0");
+                    }else {
+                        System.out.println("a / b = " + (a / b));
+                    }
                     break;
                 case 0:
                     break;

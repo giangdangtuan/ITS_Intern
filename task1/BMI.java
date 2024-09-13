@@ -14,14 +14,14 @@ public class BMI {
         if(bmi < 18.5) {
             System.out.println("Bạn gầy !");
         }
-        if(bmi >= 18.5 && bmi < 25){
+        else if(bmi >= 18.5 && bmi < 25){
             System.out.println("Bạn bình thường !");
         }
-        if(bmi >= 25 && bmi < 30)
+        else if(bmi >= 25 && bmi < 30)
         {
             System.out.println("Bạn thừa cân !");
         }
-        if(bmi >= 30)
+        else
         {
             System.out.println("Bạn béo phì !");
         }
